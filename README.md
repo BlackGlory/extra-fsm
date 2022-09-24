@@ -30,14 +30,17 @@ console.log(newState)// running
 ## API
 ```ts
 type IFiniteStateMachineSchema<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 > = Record<State, Partial<Record<Event, State>>>
 ```
 
 ### FiniteStateMachine
 ```ts
-class FiniteStateMachine<State extends string, Event extends string> {
+class FiniteStateMachine<
+  State extends string | number | symbol
+, Event extends string | number | symbol
+> {
   get [Symbol.toStringTag](): string
   get state(): State
 
@@ -59,8 +62,8 @@ class FiniteStateMachine<State extends string, Event extends string> {
 ### ObservableFiniteStateMachine
 ```ts
 interface IFiniteStateMachineStateChange<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 > {
   event: Event
   oldState: State
@@ -68,8 +71,8 @@ interface IFiniteStateMachineStateChange<
 }
 
 class ObservableFiniteStateMachine<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 > extends FiniteStateMachine<State, Event> {
   get [Symbol.toStringTag](): string
 
@@ -80,8 +83,8 @@ class ObservableFiniteStateMachine<
 ### transition
 ```ts
 export function transition<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 , TransitionEvent extends Event
 >(
   schema: IFiniteStateMachineSchema<State, Event>
@@ -92,7 +95,10 @@ export function transition<
 
 ### canTransition
 ```ts
-function canTransition<State extends string, Event extends string>(
+function canTransition<
+  State extends string | number | symbol
+, Event extends string | number | symbol
+>(
   schema: IFiniteStateMachineSchema<State, Event>
 , state: State
 , event: Event

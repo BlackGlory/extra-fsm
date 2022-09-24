@@ -1,2 +1,4 @@
-export type IFiniteStateMachineSchema<State extends string, Event extends string> =
-  Record<State, Partial<Record<Event, State>>>
+export type IFiniteStateMachineSchema<
+  State extends string | number | symbol
+, Event extends string | number | symbol
+> = Record<State, Partial<Record<Event, State>>>

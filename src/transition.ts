@@ -3,8 +3,8 @@ import { canTransition } from './can-transition'
 import { BadEventError } from './errors'
 
 export function transition<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 , TransitionEvent extends Event
 >(
   schema: IFiniteStateMachineSchema<State, Event>

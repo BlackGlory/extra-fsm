@@ -1,7 +1,10 @@
 import { IFiniteStateMachineSchema } from './types'
 import { BadEventError } from './errors'
 
-export class FiniteStateMachine<State extends string, Event extends string> {
+export class FiniteStateMachine<
+  State extends string | number | symbol
+, Event extends string | number | symbol
+> {
   private _state: State
 
   get [Symbol.toStringTag](): string {

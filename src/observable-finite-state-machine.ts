@@ -3,8 +3,8 @@ import { Subject, Observable } from 'rxjs'
 import { isEmptyObject } from '@blackglory/types'
 
 export interface IFiniteStateMachineStateChange<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 > {
   event: Event
   oldState: State
@@ -12,8 +12,8 @@ export interface IFiniteStateMachineStateChange<
 }
 
 export class ObservableFiniteStateMachine<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 > extends FiniteStateMachine<State, Event> {
   private stateChanges = new Subject<IFiniteStateMachineStateChange<State, Event>>()
 

@@ -1,8 +1,8 @@
 import { IFiniteStateMachineSchema } from './types'
 
 export function canTransition<
-  State extends string
-, Event extends string
+  State extends string | number | symbol
+, Event extends string | number | symbol
 , TransitionEvent extends Event
 >(
   schema: IFiniteStateMachineSchema<State, Event>
