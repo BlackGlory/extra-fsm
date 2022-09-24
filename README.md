@@ -19,7 +19,7 @@ const schema = {
 
 // OOP
 const fsm = new FiniteStateMachine(schema, 'stopped')
-fsm.send('start)
+fsm.send('start')
 console.log(fsm.state) // running
 
 // FP
