@@ -41,7 +41,6 @@
     "node": ">=12"
   },
   "devDependencies": {
-    "@blackglory/jest-matchers": "^0.4.1",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@rollup/plugin-commonjs": "^22.0.0",
