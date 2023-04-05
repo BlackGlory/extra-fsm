@@ -1,6 +1,7 @@
-import { ObservableFiniteStateMachine } from '@src/observable-finite-state-machine'
-import { BadEventError } from '@src/errors'
+import { ObservableFiniteStateMachine } from '@src/observable-finite-state-machine.js'
+import { BadEventError } from '@src/errors.js'
 import { getError } from 'return-style'
+import { jest } from '@jest/globals'
 
 describe('ObservableFiniteStateMachine', () => {
   describe('observerStateChanges', () => {

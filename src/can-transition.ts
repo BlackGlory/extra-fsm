@@ -1,4 +1,4 @@
-import { IFiniteStateMachineSchema } from './types'
+import { IFiniteStateMachineSchema } from './types.js'
 
 export function canTransition<
   State extends string | number | symbol

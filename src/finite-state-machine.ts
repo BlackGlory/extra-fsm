@@ -1,5 +1,5 @@
-import { IFiniteStateMachineSchema } from './types'
-import { BadEventError } from './errors'
+import { IFiniteStateMachineSchema } from './types.js'
+import { BadEventError } from './errors.js'
 
 export class FiniteStateMachine<
   State extends string | number | symbol

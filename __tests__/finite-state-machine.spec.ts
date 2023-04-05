@@ -1,5 +1,5 @@
-import { FiniteStateMachine } from '@src/finite-state-machine'
-import { BadEventError } from '@src/errors'
+import { FiniteStateMachine } from '@src/finite-state-machine.js'
+import { BadEventError } from '@src/errors.js'
 import { getError } from 'return-style'
 
 describe('FiniteStateMachine', () => {

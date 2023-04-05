@@ -1,6 +1,6 @@
-import { transition } from '@src/transition'
+import { transition } from '@src/transition.js'
 import { getError } from 'return-style'
-import { BadEventError } from '@src/errors'
+import { BadEventError } from '@src/errors.js'
 
 describe('transition', () => {
   describe('legal', () => {

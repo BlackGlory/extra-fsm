@@ -1,4 +1,4 @@
-import { canTransition } from '@src/can-transition'
+import { canTransition } from '@src/can-transition.js'
 
 describe('canTransition', () => {
   describe('legal', () => {

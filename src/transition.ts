@@ -1,6 +1,6 @@
-import { IFiniteStateMachineSchema } from './types'
-import { canTransition } from './can-transition'
-import { BadEventError } from './errors'
+import { IFiniteStateMachineSchema } from './types.js'
+import { canTransition } from './can-transition.js'
+import { BadEventError } from './errors.js'
 
 export function transition<
   State extends string | number | symbol

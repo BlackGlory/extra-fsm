@@ -1,6 +1,6 @@
-import { FiniteStateMachine } from './finite-state-machine'
+import { FiniteStateMachine } from './finite-state-machine.js'
 import { Subject, Observable } from 'rxjs'
-import { isEmptyObject } from '@blackglory/types'
+import { isEmptyObject } from 'extra-utils'
 
 export interface IFiniteStateMachineStateChange<
   State extends string | number | symbol
